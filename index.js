@@ -6,9 +6,9 @@
 
 	if (typeof _ === 'undefined') {
 		if (has_require) {
-			_ = require('underscore')
+			_ = require('lodash');
 		} else {
-			throw new Error('walk requires underscore, see http://underscorejs.org');
+			throw new Error('walk requires underscore, see http://lodash.com');
 		}
 	}
 
