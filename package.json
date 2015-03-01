@@ -1,0 +1,27 @@
+{
+  "name": "walk",
+  "version": "0.1.0",
+  "description": "traverse objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewluetgers/walk.git"
+  },
+  "peerDependencies": {
+    "lodash": "*"
+  },
+  "keywords": [
+    "lodash",
+    "traversal",
+    "object"
+  ],
+  "author": "Andrew Luetgers <andrew.luetgers@gmail.com> (http://www.andrewluetgers.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewluetgers/walk/issues"
+  },
+  "homepage": "https://github.com/andrewluetgers/walk"
+}
