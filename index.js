@@ -133,6 +133,11 @@
 		depth--;
 	}
 
+	walk.noConflict = function() {
+		root.walk = previous_walk;
+		return walk;
+	};
+
 	if (typeof exports !== 'undefined') {
 		if (typeof module !== 'undefined' && module.exports) {
 			exports = module.exports = walk;
