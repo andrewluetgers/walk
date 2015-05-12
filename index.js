@@ -1,14 +1,15 @@
 
 (function() {
-	var root = this
-	var _ = root._;
-	var has_require = typeof require !== 'undefined'
+	var root = this,
+		previous_walk = root.walk,
+		_ = root._,
+		has_require = typeof require !== 'undefined';
 
 	if (typeof _ === 'undefined') {
 		if (has_require) {
 			_ = require('lodash');
 		} else {
-			throw new Error('walk requires underscore, see http://lodash.com');
+			throw new Error('walk requires lodash, see https://lodash.com');
 		}
 	}
 
@@ -132,8 +133,13 @@
 		depth--;
 	}
 
-	if (has_require) {
-		module.exports = walk;
+	if (typeof exports !== 'undefined') {
+		if (typeof module !== 'undefined' && module.exports) {
+			exports = module.exports = walk;
+		}
+		exports.walk = walk;
+	} else {
+		root.walk = walk;
 	}
 
 }());
